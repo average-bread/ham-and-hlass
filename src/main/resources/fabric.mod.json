@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "hamnglass",
+  "version": "1.0",
+
+  "name": "Ham and Glass",
+  "description": "Just a joke that became colored glass backport",
+  "authors": [
+    "Bread (with a lot of extra help)"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+	"icon": "icon.png",
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+			"cursedbread.hamnglass.HamNglass"
+    ],
+		"beforeGameStart": [
+			"cursedbread.hamnglass.HamNglass"
+		],
+		"recipesReady": [
+			"cursedbread.hamnglass.HamCrafts"
+		]
+	},
+
+  "mixins": [
+      "hamnglass.mixins.json"
+  ],
+
+
+  "depends": {
+    "fabricloader": ">=0.13.3"
+  },
+  "suggests": {
+  }
+}
