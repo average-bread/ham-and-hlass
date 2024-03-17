@@ -1,7 +1,7 @@
 package cursedbread.hamnglass;
 
 import net.minecraft.core.block.Block;
-import goocraft4evr.nonamedyes.NoNameDyes;
+import goocraft4evr.nonamedyes.crafting.recipe.RecipesBleacher;
 import goocraft4evr.nonamedyes.item.ModItems;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.item.Item;
@@ -416,51 +416,51 @@ public class HamCrafts implements RecipeEntrypoint {
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.crimsonGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.crimsonGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.crimsonGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.maroonGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.maroonGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.maroonGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.ashgrayGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.ashgrayGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ashgrayGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.oliveGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.oliveGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.oliveGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.ochreGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.ochreGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ochreGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.buffGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.buffGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.buffGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.verdigrisGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.verdigrisGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.verdigrisGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.lightyellowGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.lightyellowGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.lightyellowGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.indigoGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.indigoGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.indigoGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.xanthicGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.xanthicGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.xanthicGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.cinnamonGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.cinnamonGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.cinnamonGlasstrapdoor, 6));
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HHH")
 				.addInput('H', HamNglass.navyblueGlass)
-				.create("coloredglasscrafting", new ItemStack(HamNglass.navyblueGlasstrapdoor, 8));
+				.create("coloredglasscrafting", new ItemStack(HamNglass.navyblueGlasstrapdoor, 6));
 		}
 	}
 }
