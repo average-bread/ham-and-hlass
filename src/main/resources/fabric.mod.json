@@ -34,9 +34,11 @@
   ],
 
 
-  "depends": {
-    "fabricloader": ">=0.13.3"
-  },
-  "suggests": {
-  }
+	"depends": {
+		"minecraft": "~7.1-beta.1",
+		"fabricloader": ">=0.13.3"
+	},
+	"suggests": {
+		"nonamedyes": ">=1.1.1"
+	}
 }

@@ -1,28 +1,26 @@
 package cursedbread.hamnglass;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.core.WeightedRandomLootObject;
 import net.minecraft.core.block.Block;
+import goocraft4evr.nonamedyes.NoNameDyes;
+import goocraft4evr.nonamedyes.item.ModItems;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemDye;
 import net.minecraft.core.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import turniplabs.halplibe.helper.BlockBuilder;
+import turniplabs.halplibe.helper.ModVersionHelper;
 import turniplabs.halplibe.helper.RecipeBuilder;
-import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
-import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 
 public class HamCrafts implements RecipeEntrypoint {
 	public static final String MOD_ID = "hamnglass";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static boolean nonamedyesOn = ModVersionHelper.isModPresent("nonamedyes");
 
 	@Override
 	public void onRecipesReady() {
-		//all the full glass blocks
+		//all full glass blocks
 		Registries.ITEM_GROUPS.register("hamnglass:nandcglass", Registries.stackListOf(
 			Block.glass,
 			HamNglass.blackGlass,
@@ -40,7 +38,19 @@ public class HamCrafts implements RecipeEntrypoint {
 			HamNglass.lightblueGlass,
 			HamNglass.magentaGlass,
 			HamNglass.orangeGlass,
-			HamNglass.whiteGlass));
+			HamNglass.whiteGlass,
+			HamNglass.crimsonGlass,
+			HamNglass.maroonGlass,
+			HamNglass.ashgrayGlass,
+			HamNglass.oliveGlass,
+			HamNglass.ochreGlass,
+			HamNglass.buffGlass,
+			HamNglass.verdigrisGlass,
+			HamNglass.lightyellowGlass,
+			HamNglass.indigoGlass,
+			HamNglass.cinnamonGlass,
+			HamNglass.xanthicGlass,
+			HamNglass.navyblueGlass));
 		//ham blcok crafting
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("HHH", "HHH", "HHH")
@@ -131,6 +141,68 @@ public class HamCrafts implements RecipeEntrypoint {
 			.addInput('H', "hamnglass:nandcglass")
 			.addInput('D', Item.dye, 15)
 			.create("coloredglasscrafting", new ItemStack(HamNglass.whiteGlass, 8));
+		if (nonamedyesOn){
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 0)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.crimsonGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 1)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.maroonGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 2)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ashgrayGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 3)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.oliveGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 4)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ochreGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 5)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.buffGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 6)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.verdigrisGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 7)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.lightyellowGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 8)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.indigoGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 9)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.xanthicGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 10)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.cinnamonGlass, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HDH", "HHH")
+				.addInput('H', "hamnglass:nandcglass")
+				.addInput('D', ModItems.dye, 11)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.navyblueGlass, 8));
+		}
 		//rehestration and a lot of same recipies for different colored glass trapddors
 		Registries.ITEM_GROUPS.register("hamnglass:nandcglasstrapdoors", Registries.stackListOf(
 			Block.trapdoorGlass,
@@ -149,7 +221,19 @@ public class HamCrafts implements RecipeEntrypoint {
 			HamNglass.lightblueGlasstrapdoor,
 			HamNglass.magentaGlasstrapdoor,
 			HamNglass.orangeGlasstrapdoor,
-			HamNglass.whiteGlasstrapdoor));
+			HamNglass.whiteGlasstrapdoor,
+			HamNglass.crimsonGlasstrapdoor,
+			HamNglass.maroonGlasstrapdoor,
+			HamNglass.ashgrayGlasstrapdoor,
+			HamNglass.oliveGlasstrapdoor,
+			HamNglass.ochreGlasstrapdoor,
+			HamNglass.buffGlasstrapdoor,
+			HamNglass.verdigrisGlasstrapdoor,
+			HamNglass.lightyellowGlasstrapdoor,
+			HamNglass.indigoGlasstrapdoor,
+			HamNglass.cinnamonGlasstrapdoor,
+			HamNglass.xanthicGlasstrapdoor,
+			HamNglass.navyblueGlasstrapdoor));
 		RecipeBuilder.Shapeless(MOD_ID)
 			.addInput("hamnglass:nandcglasstrapdoors")
 			.addInput(Item.dye, 0)
@@ -279,5 +363,104 @@ public class HamCrafts implements RecipeEntrypoint {
 			.setShape("HHH", "HHH")
 			.addInput('H', HamNglass.whiteGlass)
 			.create("coloredglasscrafting", new ItemStack(HamNglass.whiteGlasstrapdoor, 6));
+		if (nonamedyesOn){
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 0)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.crimsonGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 1)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.maroonGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 2)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.ashgrayGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 3)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.oliveGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 4)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.ochreGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 5)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.buffGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 6)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.verdigrisGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 7)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.lightyellowGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 8)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.indigoGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 9)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.xanthicGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 10)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.cinnamonGlasstrapdoor, 1));
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput("hamnglass:nandcglasstrapdoors")
+				.addInput(ModItems.dye, 11)
+				.create("coloredglasstrapdoorscrafting", new ItemStack(HamNglass.navyblueGlasstrapdoor, 1));
+
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.crimsonGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.crimsonGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.maroonGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.maroonGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.ashgrayGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ashgrayGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.oliveGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.oliveGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.ochreGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.ochreGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.buffGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.buffGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.verdigrisGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.verdigrisGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.lightyellowGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.lightyellowGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.indigoGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.indigoGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.xanthicGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.xanthicGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.cinnamonGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.cinnamonGlasstrapdoor, 8));
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HHH")
+				.addInput('H', HamNglass.navyblueGlass)
+				.create("coloredglasscrafting", new ItemStack(HamNglass.navyblueGlasstrapdoor, 8));
+		}
 	}
 }

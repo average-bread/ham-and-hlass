@@ -16,6 +16,7 @@ import net.minecraft.client.sound.block.BlockSound;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
+import turniplabs.halplibe.helper.ModVersionHelper;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
 import turniplabs.halplibe.util.ConfigHandler;
@@ -65,7 +66,7 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 		config.updateConfig();
 	}
 
-
+	public static boolean nonamedyesOn = ModVersionHelper.isModPresent("nonamedyes");
 	public static Block hamBlock;
 	public static Block blackGlass;
 	public static Block redGlass;
@@ -84,6 +85,21 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 	public static Block orangeGlass;
 	public static Block whiteGlass;
 
+	// Yes name dye glass
+	public static Block crimsonGlass;
+	public static Block maroonGlass;
+	public static Block ashgrayGlass;
+	public static Block oliveGlass;
+	public static Block ochreGlass;
+	public static Block buffGlass;
+	public static Block verdigrisGlass;
+	public static Block lightyellowGlass;
+	public static Block indigoGlass;
+	public static Block xanthicGlass;
+	public static Block cinnamonGlass;
+	public static Block navyblueGlass;
+
+
 	public static Block blackGlasstrapdoor;
 	public static Block redGlasstrapdoor;
 	public static Block greenGlasstrapdoor;
@@ -100,6 +116,20 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 	public static Block magentaGlasstrapdoor;
 	public static Block orangeGlasstrapdoor;
 	public static Block whiteGlasstrapdoor;
+
+	// Yes name dye glass trapdoors
+	public static Block crimsonGlasstrapdoor;
+	public static Block maroonGlasstrapdoor;
+	public static Block ashgrayGlasstrapdoor;
+	public static Block oliveGlasstrapdoor;
+	public static Block ochreGlasstrapdoor;
+	public static Block buffGlasstrapdoor;
+	public static Block verdigrisGlasstrapdoor;
+	public static Block lightyellowGlasstrapdoor;
+	public static Block indigoGlasstrapdoor;
+	public static Block xanthicGlasstrapdoor;
+	public static Block cinnamonGlasstrapdoor;
+	public static Block navyblueGlasstrapdoor;
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Mmmmm, ham and glass");
@@ -183,6 +213,46 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 			.setTextures("glass/white_glass.png")
 			.build(new BlockColoredGlass("whiteGlass", startingBlockId++, Material.glass, false));
 
+			if (nonamedyesOn){
+				crimsonGlass = coloredglass
+					.setTextures("glass/crimson_glass.png")
+					.build(new BlockColoredGlass("crimsonGlass", startingBlockId++, Material.glass, false));
+				maroonGlass = coloredglass
+					.setTextures("glass/maroon_glass.png")
+					.build(new BlockColoredGlass("maroonGlass", startingBlockId++, Material.glass, false));
+				ashgrayGlass = coloredglass
+					.setTextures("glass/ash_gray_glass.png")
+					.build(new BlockColoredGlass("ashgrayGlass", startingBlockId++, Material.glass, false));
+				oliveGlass = coloredglass
+					.setTextures("glass/olive_glass.png")
+					.build(new BlockColoredGlass("oliveGlass", startingBlockId++, Material.glass, false));
+				ochreGlass = coloredglass
+					.setTextures("glass/ochre_glass.png")
+					.build(new BlockColoredGlass("ochreGlass", startingBlockId++, Material.glass, false));
+				buffGlass = coloredglass
+					.setTextures("glass/buff_glass.png")
+					.build(new BlockColoredGlass("buffGlass", startingBlockId++, Material.glass, false));
+				verdigrisGlass = coloredglass
+					.setTextures("glass/verdigris_glass.png")
+					.build(new BlockColoredGlass("verdigrisGlass", startingBlockId++, Material.glass, false));
+				lightyellowGlass = coloredglass
+					.setTextures("glass/light_yellow_glass.png")
+					.build(new BlockColoredGlass("lightyellowGlass", startingBlockId++, Material.glass, false));
+				indigoGlass = coloredglass
+					.setTextures("glass/indigo_glass.png")
+					.build(new BlockColoredGlass("indigoGlass", startingBlockId++, Material.glass, false));
+				xanthicGlass = coloredglass
+					.setTextures("glass/xanthic_glass.png")
+					.build(new BlockColoredGlass("xanthicGlass", startingBlockId++, Material.glass, false));
+				cinnamonGlass = coloredglass
+					.setTextures("glass/cinnamon_glass.png")
+					.build(new BlockColoredGlass("cinnamonGlass", startingBlockId++, Material.glass, false));
+				navyblueGlass = coloredglass
+					.setTextures("glass/navy_blue_glass.png")
+					.build(new BlockColoredGlass("navyblueGlass", startingBlockId++, Material.glass, false));
+			}
+
+
 		//funny glass trapdoors
 
 		blackGlasstrapdoor = coloredglasstrapdoors
@@ -233,6 +303,45 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 		whiteGlasstrapdoor = coloredglasstrapdoors
 			.setTextures("glass/white_glass.png")
 			.build(new ColoredTrapdoors("whiteGlasstrapdoor", startingBlockId++));
+
+		if (nonamedyesOn){
+			crimsonGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/crimson_glass.png")
+				.build(new ColoredTrapdoors("crimsonGlasstrapdoor", startingBlockId++));
+			maroonGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/maroon_glass.png")
+				.build(new ColoredTrapdoors("maroonGlasstrapdoor", startingBlockId++));
+			ashgrayGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/ash_gray_glass.png")
+				.build(new ColoredTrapdoors("ashgrayGlasstrapdoor", startingBlockId++));
+			oliveGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/olive_glass.png")
+				.build(new ColoredTrapdoors("oliveGlasstrapdoor", startingBlockId++));
+			ochreGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/ochre_glass.png")
+				.build(new ColoredTrapdoors("ochreGlasstrapdoor", startingBlockId++));
+			buffGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/buff_glass.png")
+				.build(new ColoredTrapdoors("buffGlasstrapdoor", startingBlockId++));
+			verdigrisGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/verdigris_glass.png")
+				.build(new ColoredTrapdoors("verdigrisGlasstrapdoor", startingBlockId++));
+			lightyellowGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/light_yellow_glass.png")
+				.build(new ColoredTrapdoors("lightyellowGlasstrapdoor", startingBlockId++));
+			indigoGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/indigo_glass.png")
+				.build(new ColoredTrapdoors("indigoGlasstrapdoor", startingBlockId++));
+			xanthicGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/xanthic_glass.png")
+				.build(new ColoredTrapdoors("xanthicGlasstrapdoor", startingBlockId++));
+			cinnamonGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/cinnamon_glass.png")
+				.build(new ColoredTrapdoors("cinnamonGlasstrapdoor", startingBlockId++));
+			navyblueGlasstrapdoor = coloredglasstrapdoors
+				.setTextures("glass/navy_blue_glass.png")
+				.build(new ColoredTrapdoors("navyblueGlasstrapdoor", startingBlockId++));
+		}
 
 	}
 
