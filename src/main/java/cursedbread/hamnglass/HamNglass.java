@@ -3,6 +3,7 @@ package cursedbread.hamnglass;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.WeightedRandomLootObject;
+import net.minecraft.core.block.BlockMushroom;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemDye;
@@ -16,6 +17,7 @@ import net.minecraft.client.sound.block.BlockSound;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
+import turniplabs.halplibe.helper.ItemHelper;
 import turniplabs.halplibe.helper.ModVersionHelper;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
@@ -54,7 +56,9 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 		.setVisualUpdateOnMetadata()
 		.setUseInternalLight();
 
+
 	public static int blockId;
+
 
 	static {
 		Properties prop = new Properties();
@@ -142,7 +146,7 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 		//funny ham block \/
 
 		hamBlock = new BlockBuilder(MOD_ID)
-			.setTextures("ham_block.png")
+			.setTextures("extra/ham_block.png")
 			.setBlockModel(new BlockModelRenderBlocks(0))
 			.setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.8f))
 			.build(new Block("hamBlock", startingBlockId++, Material.dirt));

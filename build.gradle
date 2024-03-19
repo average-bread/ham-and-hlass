@@ -80,6 +80,22 @@ repositories {
 		}
 		metadataSources { artifact() }
 	}
+	repositories {
+		ivy {
+			url = "https://github.com/UselessSolutions"
+			patternLayout {
+				artifact "[organisation]/releases/download/v[revision]/[module]-[revision].jar"
+				m2compatible = true
+			}
+			metadataSources { artifact() }
+		}
+	}
+
+	dependencies {
+
+		modImplementation "BTA_Babric_PrismaticLibe:prismaticlibe:${project.prismatic_version}"
+
+	}
 }
 
 dependencies {
