@@ -13,7 +13,7 @@ import net.minecraft.core.block.BlockGlass;
 import net.minecraft.core.block.BlockTorch;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.item.block.ItemBlock;
-import net.minecraft.client.sound.block.BlockSound;
+import net.minecraft.core.sound.BlockSound;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
