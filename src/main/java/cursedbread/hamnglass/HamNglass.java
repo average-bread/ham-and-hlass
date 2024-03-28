@@ -31,15 +31,6 @@ import turniplabs.halplibe.util.RecipeEntrypoint;
 public class HamNglass implements ModInitializer, GameStartEntrypoint {
 	public static final String MOD_ID = "hamnglass";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static BlockBuilder standardBlockBuilder = new BlockBuilder(MOD_ID)
-		.setNorthTexture(16, 8) // the coordinates of the blue N texture from the terrain atlas
-		.setSouthTexture(17, 8) // the coordinates of the green S texture from the terrain atlas
-		.setBottomTexture(18, 8) // the coordinates of the purple D texture from the terrain atlas
-		.setEastTexture(16, 9) // the coordinates of the red E texture from the terrain atlas
-		.setWestTexture(17, 9) // the coordinates of the yellow W texture from the terrain atlas
-		.setTopTexture(18, 9) // the coordinates of the orange U texture from the terrain atlas
-		.setHardness(5f); // Sets the hardness which affects the time to mine the blocks
-	//too scared that everything will break, better keep this pieve of code as it is ^
 
 	public static final BlockBuilder coloredglass = new BlockBuilder(MOD_ID)
 		.setBlockModel(new BlockModelRenderBlocks(0))

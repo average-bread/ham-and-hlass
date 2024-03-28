@@ -19,8 +19,7 @@ public class HamCrafts implements RecipeEntrypoint {
 	public static boolean nonamedyesOn = ModVersionHelper.isModPresent("nonamedyes");
 
 	@Override
-	public void onRecipesReady() {
-		//all full glass blocks
+	public void initNamespaces() {
 		Registries.ITEM_GROUPS.register("hamnglass:nandcglass", Registries.stackListOf(
 			Block.glass,
 			HamNglass.blackGlass,
@@ -51,6 +50,12 @@ public class HamCrafts implements RecipeEntrypoint {
 			HamNglass.cinnamonGlass,
 			HamNglass.xanthicGlass,
 			HamNglass.navyblueGlass));
+	}
+
+	@Override
+	public void onRecipesReady() {
+		//all full glass blocks
+
 		//ham blcok crafting
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("HHH", "HHH", "HHH")
@@ -463,4 +468,6 @@ public class HamCrafts implements RecipeEntrypoint {
 				.create("coloredglasscrafting", new ItemStack(HamNglass.navyblueGlasstrapdoor, 6));
 		}
 	}
+
+
 }
