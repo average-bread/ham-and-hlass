@@ -337,6 +337,7 @@ public class HamNglass implements ModInitializer, GameStartEntrypoint {
 				.setTextures("glass/navy_blue_glass.png")
 				.build(new ColoredTrapdoors("navyblueGlasstrapdoor", startingBlockId++));
 		}
+		//potato
 
 	}
 
